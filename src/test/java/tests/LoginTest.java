@@ -67,7 +67,7 @@ public class LoginTest extends Base {
 	@DataProvider
 	public Object[][] enterLoginData() {
 		
-		Object [][] data = {{"kjk@gmail.com","kjk1987","Successfull"},{"dummy@test.com","dummy123","Failure"}};
+		Object [][] data = {{"testingqa123@gmail.com","testingqa1987","Successfull"},{"dummy@test.com","dummy123","Failure"}};
 		return data;
 	}
 	
