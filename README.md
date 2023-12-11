@@ -13,7 +13,7 @@
 ## Installation steps and User instructions in Eclispe IDE for running the project:
     - Open Eclipse IDE
     - Go to Import projects..
-    - Existing Projects into Workspace
+    - Existing projects into Workspace..
     - Browse directory path from that folder You created
     - Run the test under **testng.xml** file
 
