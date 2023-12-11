@@ -1,6 +1,5 @@
 # frameworkproject
-# This project is designed to enable automated testing of specific functionalities within a web store, 
-such as validating the login form and conducting end-to-end tests for selected product's purchase process.
+# This project is designed to enable automated testing of specific functionalities within a web store, such as validating the login form and conducting end-to-end tests for selected product's purchase process.
 
 ## Installation steps in Git for running the project:
     - Create new folder somewhere on your machine
