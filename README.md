@@ -20,4 +20,4 @@ such as validating the login form and conducting end-to-end tests for selected p
 
 
 ## Contact information:
-Please be free to contact me on manojlovic.nikola@yahoo.com if you have some difficulty to run the project.
+Please feel free to contact me at manojlovic.nikola@yahoo.com if you encounter any difficulties running the project
