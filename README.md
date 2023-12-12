@@ -6,8 +6,6 @@
     - Open folder path in command prompt
           example: C:\Users\YourMachineName\Desktop\folderName
     - Type **git init** into command prompt
-    - Than **git config --global user.name "..User Name.."**
-    - Than **git config --global user.mail "..User email.."**
     - Than **git clone https://github.com/manegit1996/frameworkproject.git** (code path from this repository)
 
 ## Installation steps and User instructions in Eclispe IDE for running the project:
