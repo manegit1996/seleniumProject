@@ -9,7 +9,7 @@
     - Than **git clone https://github.com/manegit1996/frameworkproject.git** (code path from this repository)
 
 ## Installation steps and User instructions in Eclispe IDE for running the project:
-    - Open Eclipse IDE
+    - Open your IDE
     - Go to Import projects..
     - Existing projects into Workspace..
     - Browse directory path from that folder You created
