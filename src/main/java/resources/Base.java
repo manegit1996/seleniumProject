@@ -23,7 +23,9 @@ public class Base extends ExtentReporterDemo{
 	public WebDriver initializeBrowser() throws IOException {
 		
 		prop = new Properties();
-		String propPath = System.getProperty("user.dir")+"\\src\\main\\java\\resources\\data.properties";
+		String propPath = System.getProperty("user.dir")+ File.separator + "src" + File.separator + "main" + File.separator + "java" + File.separator +
+													"resources" + File.separator + "data.properties";
+													
 		FileInputStream fis = new FileInputStream(propPath);
 		prop.load(fis);
 		
@@ -48,7 +50,7 @@ public class Base extends ExtentReporterDemo{
 	public String takeScreenshot(String testName, WebDriver driver) throws IOException {
 		
 		File SourceFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		String destinationFilePath = System.getProperty("user.dir")+"\\screenshots\\"+testName+".png";
+		String destinationFilePath = System.getProperty("user.dir")+ File.separator + "screenshots" +testName+".png";
 		FileUtils.copyFile(SourceFile,new File(destinationFilePath));
 		
 		return destinationFilePath;
