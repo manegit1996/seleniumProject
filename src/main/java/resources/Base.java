@@ -11,9 +11,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
+//import utilities.ExtentReporter;
+import utilities.ExtentReporterDemo;
 
 //Browser Setup
-public class Base {
+public class Base extends ExtentReporterDemo{
 	
 	public WebDriver driver;
 	public Properties prop;

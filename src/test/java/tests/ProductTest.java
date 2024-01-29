@@ -10,6 +10,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
 import pageobjects.BillingDetails;
 import pageobjects.LandingPage;
 import pageobjects.LoginPage;
@@ -30,8 +33,9 @@ public class ProductTest extends Base {
 	}
 
 	@Test(dataProvider="enterLoginData")
-	public void productTest(String email, String password) throws InterruptedException { 
+	public void productTest(String email, String password) throws InterruptedException, IOException { 
 		
+		ExtentTest loginNav = extent.createTest("Product Test. Navigating to login page..", "login page");
 		LandingPage landingPage = new LandingPage(driver);
 		landingPage.myAccount().click();
 		Thread.sleep(2000);
@@ -42,13 +46,15 @@ public class ProductTest extends Base {
 		loginPage.passwordInput().sendKeys(password);
 		Thread.sleep(2000);
 		loginPage.loginButton().click();
+		loginNav.log(Status.INFO, "Successfully login to proucts page..");
 		Thread.sleep(2000);
 		
-		//Screenshot failure test
-		//Assert.assertTrue(false);
+
 		
 		ProductSearch productSearch = new ProductSearch(driver);
+		ExtentTest inputProduct = extent.createTest("Product Test. Searching product name in input..", "product in input");
 		productSearch.searchProduct().sendKeys("MacBook");
+		inputProduct.log(Status.INFO, "entering product name..");
 		Thread.sleep(2000);
 		productSearch.searchButton().click();
 		Thread.sleep(2000);
@@ -57,43 +63,58 @@ public class ProductTest extends Base {
 			Thread.sleep(2000);
 			productSearch.productName().click();
 			Thread.sleep(2000);
+			inputProduct.log(Status.INFO, "clicking on product..");
 		} else {
 			
 			System.out.println("There is no souch an Element");
+			inputProduct.log(Status.ERROR, "there is no souch a product..");
+			takeScreenshot("Product test",driver);
+			
 		}
 		
 		
 		ProductAddToCart addToCart = new ProductAddToCart(driver);
+		ExtentTest addTocartProd = extent.createTest("Product Test. Adding product to cart..", "adding to cart");
 		Thread.sleep(2000);
 		addToCart.quantity().clear();
 		Thread.sleep(2000);
 		addToCart.quantity().sendKeys("1");
+		addTocartProd.log(Status.INFO, "adding quantity for product..");
 		Thread.sleep(2000);
 		addToCart.submitButton().click();
+		addTocartProd.log(Status.INFO, "submiting the product..");
 		Thread.sleep(2000);
 		addToCart.dropdownCart().click();
 		Thread.sleep(2000);
 		addToCart.viewCart().click();
+		addTocartProd.log(Status.INFO, "clicking on cart..");
+		
 		
 		ShoppingCart shoppingCart = new ShoppingCart(driver);
+		ExtentTest cartProduct = extent.createTest("Cart Test, cart page..", "on cart page");
 		shoppingCart.quantityInput().clear();
 		Thread.sleep(2000);
 		shoppingCart.quantityInput().sendKeys("1");
+		cartProduct.log(Status.INFO, "entering quiantity of product in cart..");
 		Thread.sleep(2000);
 		shoppingCart.checkoutButton().click();
+		cartProduct.log(Status.INFO, "cart checkout..");
+		
 		
 		Thread.sleep(2000);
 		BillingDetails billingDetails = new BillingDetails(driver);
+		ExtentTest billingDet = extent.createTest("Billing Test, billing page..", "bill page");
+		billingDet.log(Status.INFO, "entering required credentials for billing..");
 		billingDetails.firstName().sendKeys("Test Name Credentials");
-		//Thread.sleep(2000);
+		Thread.sleep(2000);
 		billingDetails.lastName().sendKeys("Test Last Name Credentials");
 		//Thread.sleep(2000);
 		billingDetails.company().sendKeys("Test Company Credentials");
-		//Thread.sleep(2000);
+		Thread.sleep(2000);
 		billingDetails.adressOne().sendKeys("Adress One Credentials");
 		//Thread.sleep(2000);
 		billingDetails.city().sendKeys("City Credentials");
-		//Thread.sleep(2000);
+		Thread.sleep(2000);
 		billingDetails.postCode().sendKeys("Post Code Credentials");
 		//Thread.sleep(2000);
 		billingDetails.country().click();
@@ -110,12 +131,14 @@ public class ProductTest extends Base {
 		billingDetails.agreeTearms().click();
 		Thread.sleep(2000);
 		billingDetails.confirmComment().click();
+		billingDet.log(Status.INFO, "payment card requiered..");
 	}
 	
 	@DataProvider
 	public Object[][] enterLoginData() {
 		
-		Object [][] data = {{"testingqa123@gmail.com","testingqa1987"}};
+		Object [][] data = {{"seleniumtest87@gmail.com","seleniumtestpassword"}};
+		
 		return data;
 	}
 	
