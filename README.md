@@ -20,14 +20,22 @@ This project is designed to enable automated testing of specific functionalities
 - Install the TestNG plugin in Your Eclipse IDE:
   Help -> Install new Software -> add -> location: https://testng.org/testng-eclipse-update-site/
     
-## Installation steps in Git for running the project:
-- Create a new folder somewhere on your machine
-- Open the folder path in the command prompt
-      example: C:\Users\YourMachineName\Desktop\folderName
-- Type **git init** into command prompt
-- Than **git clone https://github.com/manegit1996/frameworkproject.git** (code path from this repository)
+## Steps for opening the project from github through eclipse IDE
+- Run Eclipse IDE
+- Right click import..
+- Git -> Projects from Git(with smart import)
+- Clone URI
+- Copy HTTPS repository path
+- Paste the path under URI
+- Choose local destination directory
+- Right click on imported project -> maven -> Update project..
 
-## Installation steps and User instructions in Eclipse IDE for running the project:
-- Open your IDE
-- Go to Import projects..
-- Existing projects into Workspace..
+## Execute the tests 
+- Run  `testng.xml` in the project to execute the tests
+
+- After executing the tests, under `extent.xml` will be created test cases reports.
+- Also, under Screenshot folder will be created `screenshots` for invalid login
+
+
+## Contact information:
+Please feel free to contact me at manojlovic.nikola@yahoo.com if you encounter any difficulties running the project
