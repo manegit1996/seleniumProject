@@ -11,13 +11,13 @@
 
 ## Installation tools:
     - Open a new terminal and install **Homebrew** on iOS (if You don't have):
-    `` 
+    ```
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    ``
+    ```
     - Install Maven using Homebrew:
-    ``
+    ```
     brew install maven
-    ``
+    ```
     - Install TestNG plugin in Your Eclipse IDE:
         Help -> Install new Software -> add -> location: https://testng.org/testng-eclipse-update-site/
     
@@ -33,7 +33,7 @@
     - Go to Import projects..
     - Existing projects into Workspace..
     - Browse directory path from that folder You created
-    - Run the test under **testng.xml** file
+    - Run the test under **testng.xml** file or in terminal: **mvn clean install** (you must be in project path)
 
 
 ## Contact information:
