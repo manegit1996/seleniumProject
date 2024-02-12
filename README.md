@@ -8,6 +8,18 @@
         (I recommend setting the "JAVA_HOME" environment variable to the path of the Java JDK installation (check with echo $JAVA_HOME))
     - Eclipse IDE
     - Apache Maven (I recommend setting the "MAVEN_HOME" enviroment variable to the path of the Maven installation)
+
+## Installation tools:
+    - Open a new terminal and install **Homebrew** on iOS (if You don't have):
+    `` 
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ``
+    - Install Maven using Homebrew:
+    ``
+    brew install maven
+    ``
+    - Install TestNG plugin in Your Eclipse IDE:
+        Help -> Install new Software -> add -> location: https://testng.org/testng-eclipse-update-site/
     
 ## Installation steps in Git for running the project:
     - Create new folder somewhere on your machine
