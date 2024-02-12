@@ -1,6 +1,14 @@
 
 # This project is designed to enable automated testing of specific functionalities within a web store, such as validating the login form and conducting end-to-end test for selected product's purchase process.
 
+## Necessary tools to have on Your machine for starting the project:
+    - git
+    - node
+    - Java JDK: Provided download link: (https://www.oracle.com/java/technologies/downloads/)
+        (I recommend setting the "JAVA_HOME" environment variable to the path of the Java JDK installation (check with echo $JAVA_HOME))
+    - Eclipse IDE
+    - Apache Maven (I recommend setting the "MAVEN_HOME" enviroment variable to the path of the Maven installation)
+    
 ## Installation steps in Git for running the project:
     - Create new folder somewhere on your machine
     - Open folder path in command prompt
